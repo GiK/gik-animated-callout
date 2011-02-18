@@ -58,6 +58,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AnimatedCallout_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedCallout_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AnimatedCallout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimatedCallout-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F1D5C268130ED498006730B5 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		F822C523130A1004000F0385 /* GIKCalloutContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutContentView.h; sourceTree = "<group>"; };
 		F822C524130A1004000F0385 /* GIKCalloutContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutContentView.m; sourceTree = "<group>"; };
 		F822C56F130A2AF3000F0385 /* Hotels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hotels.plist; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 				F822C632130B356E000F0385 /* Images */,
 				8D1107310486CEB800E47090 /* AnimatedCallout-Info.plist */,
 				F822C56F130A2AF3000F0385 /* Hotels.plist */,
+				F1D5C268130ED498006730B5 /* README.mdown */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
