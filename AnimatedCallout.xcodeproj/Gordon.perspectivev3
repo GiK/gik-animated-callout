@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>F80D604F130DD738009ED142</string>
+										<string>F80D605A130DFC55009ED142</string>
 										<key>history</key>
 										<array>
 											<string>F822C552130A205A000F0385</string>
@@ -364,7 +364,7 @@
 											<string>F8BEF35C130DCBDE000D5E50</string>
 											<string>F8BEF35D130DCBDE000D5E50</string>
 											<string>F80D604D130DD738009ED142</string>
-											<string>F80D604E130DD738009ED142</string>
+											<string>F80D604F130DD738009ED142</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -487,11 +487,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>F80D6050130DD738009ED142</string>
+				<string>F80D605B130DFC55009ED142</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>F80D6051130DD738009ED142</string>
+				<string>F80D605C130DFC55009ED142</string>
 				<string>F862DD7B1309B7F9005CDAE3</string>
-				<string>F80D6052130DD738009ED142</string>
+				<string>F80D605D130DFC55009ED142</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -680,7 +680,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/Gordon/Developer/Xcode/GiK/AnimatedCallout/AnimatedCallout.xcodeproj</string>
+		<string>/Users/Gordon/Developer/Xcode/GiK/gik-animated-callout/AnimatedCallout.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1194 358 1355 1060 0 0 2560 1418 </string>
