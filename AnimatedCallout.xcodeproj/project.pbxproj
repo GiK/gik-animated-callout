@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AnimatedCalloutAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AnimatedCalloutAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MapViewController.m */; };
+		F822C525130A1004000F0385 /* GIKCalloutContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C524130A1004000F0385 /* GIKCalloutContentView.m */; };
+		F822C570130A2AF3000F0385 /* Hotels.plist in Resources */ = {isa = PBXBuildFile; fileRef = F822C56F130A2AF3000F0385 /* Hotels.plist */; };
+		F822C579130A342A000F0385 /* HotelAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C578130A342A000F0385 /* HotelAnnotation.m */; };
+		F822C580130A3476000F0385 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C57F130A3476000F0385 /* Hotel.m */; };
+		F822C63E130B356E000F0385 /* CalloutPopoverBottomLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C633130B356E000F0385 /* CalloutPopoverBottomLeft.png */; };
+		F822C63F130B356E000F0385 /* CalloutPopoverBottomMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C634130B356E000F0385 /* CalloutPopoverBottomMiddle.png */; };
+		F822C640130B356E000F0385 /* CalloutPopoverBottomRight.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C635130B356E000F0385 /* CalloutPopoverBottomRight.png */; };
+		F822C641130B356E000F0385 /* CalloutPopoverDownArrows.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C636130B356E000F0385 /* CalloutPopoverDownArrows.png */; };
+		F822C642130B356E000F0385 /* CalloutPopoverLeftArrows.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C637130B356E000F0385 /* CalloutPopoverLeftArrows.png */; };
+		F822C643130B356E000F0385 /* CalloutPopoverMiddleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C638130B356E000F0385 /* CalloutPopoverMiddleLeft.png */; };
+		F822C644130B356E000F0385 /* CalloutPopoverMiddleMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C639130B356E000F0385 /* CalloutPopoverMiddleMiddle.png */; };
+		F822C645130B356E000F0385 /* CalloutPopoverMiddleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C63A130B356E000F0385 /* CalloutPopoverMiddleRight.png */; };
+		F822C646130B356E000F0385 /* CalloutPopoverTopLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C63B130B356E000F0385 /* CalloutPopoverTopLeft.png */; };
+		F822C647130B356E000F0385 /* CalloutPopoverTopMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C63C130B356E000F0385 /* CalloutPopoverTopMiddle.png */; };
+		F822C648130B356E000F0385 /* CalloutPopoverTopRight.png in Resources */ = {isa = PBXBuildFile; fileRef = F822C63D130B356E000F0385 /* CalloutPopoverTopRight.png */; };
+		F822C64C130B3575000F0385 /* AnimatedCalloutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F822C64A130B3575000F0385 /* AnimatedCalloutViewController.xib */; };
+		F822C64D130B3575000F0385 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F822C64B130B3575000F0385 /* MainWindow.xib */; };
+		F822C650130B366F000F0385 /* HotelDetailTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F822C64F130B366F000F0385 /* HotelDetailTableView.xib */; };
+		F8320A29130B3F8B00CB5810 /* Button_DisclosureAccessory.png in Resources */ = {isa = PBXBuildFile; fileRef = F8320A28130B3F8B00CB5810 /* Button_DisclosureAccessory.png */; };
+		F8320A7D130B79A400CB5810 /* CalloutTableBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8320A7C130B79A400CB5810 /* CalloutTableBackground.png */; };
+		F862DDB11309BB06005CDAE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DDB01309BB06005CDAE3 /* MapKit.framework */; };
+		F862DDF01309BB7B005CDAE3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DDEF1309BB7B005CDAE3 /* CoreLocation.framework */; };
+		F862DE251309C2CB005CDAE3 /* GIKCalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */; };
+		F862DE2A1309C489005CDAE3 /* GIKCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DE291309C489005CDAE3 /* GIKCalloutView.m */; };
+		F862DE991309DC61005CDAE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DE981309DC61005CDAE3 /* QuartzCore.framework */; };
+		F862DF01130AC465005CDAE3 /* GIKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF00130AC465005CDAE3 /* GIKAnnotation.m */; };
+		F862DF09130AC6A3005CDAE3 /* GIKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */; };
+		F862DF4F130AE683005CDAE3 /* GIKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */; };
+		F862DF6E130AFB57005CDAE3 /* HotelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF6D130AFB57005CDAE3 /* HotelDetailViewController.m */; };
+		F8BEF0C2130D53FF000D5E50 /* GIKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */; };
+		F8BEF12D130D6AD3000D5E50 /* GIKMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BEF12C130D6AD3000D5E50 /* GIKMapView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AnimatedCalloutAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedCalloutAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AnimatedCalloutAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedCalloutAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* AnimatedCallout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedCallout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28D7ACF60DDB3853001CB0EB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* AnimatedCallout_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedCallout_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* AnimatedCallout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimatedCallout-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		F822C523130A1004000F0385 /* GIKCalloutContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutContentView.h; sourceTree = "<group>"; };
+		F822C524130A1004000F0385 /* GIKCalloutContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutContentView.m; sourceTree = "<group>"; };
+		F822C56F130A2AF3000F0385 /* Hotels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hotels.plist; sourceTree = "<group>"; };
+		F822C577130A342A000F0385 /* HotelAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelAnnotation.h; sourceTree = "<group>"; };
+		F822C578130A342A000F0385 /* HotelAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelAnnotation.m; sourceTree = "<group>"; };
+		F822C57E130A3476000F0385 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		F822C57F130A3476000F0385 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		F822C633130B356E000F0385 /* CalloutPopoverBottomLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverBottomLeft.png; sourceTree = "<group>"; };
+		F822C634130B356E000F0385 /* CalloutPopoverBottomMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverBottomMiddle.png; sourceTree = "<group>"; };
+		F822C635130B356E000F0385 /* CalloutPopoverBottomRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverBottomRight.png; sourceTree = "<group>"; };
+		F822C636130B356E000F0385 /* CalloutPopoverDownArrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverDownArrows.png; sourceTree = "<group>"; };
+		F822C637130B356E000F0385 /* CalloutPopoverLeftArrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverLeftArrows.png; sourceTree = "<group>"; };
+		F822C638130B356E000F0385 /* CalloutPopoverMiddleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverMiddleLeft.png; sourceTree = "<group>"; };
+		F822C639130B356E000F0385 /* CalloutPopoverMiddleMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverMiddleMiddle.png; sourceTree = "<group>"; };
+		F822C63A130B356E000F0385 /* CalloutPopoverMiddleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverMiddleRight.png; sourceTree = "<group>"; };
+		F822C63B130B356E000F0385 /* CalloutPopoverTopLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverTopLeft.png; sourceTree = "<group>"; };
+		F822C63C130B356E000F0385 /* CalloutPopoverTopMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverTopMiddle.png; sourceTree = "<group>"; };
+		F822C63D130B356E000F0385 /* CalloutPopoverTopRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutPopoverTopRight.png; sourceTree = "<group>"; };
+		F822C64A130B3575000F0385 /* AnimatedCalloutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimatedCalloutViewController.xib; sourceTree = "<group>"; };
+		F822C64B130B3575000F0385 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		F822C64F130B366F000F0385 /* HotelDetailTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelDetailTableView.xib; sourceTree = "<group>"; };
+		F8320A28130B3F8B00CB5810 /* Button_DisclosureAccessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_DisclosureAccessory.png; sourceTree = "<group>"; };
+		F8320A7C130B79A400CB5810 /* CalloutTableBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutTableBackground.png; sourceTree = "<group>"; };
+		F862DDB01309BB06005CDAE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F862DDEF1309BB7B005CDAE3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F862DE231309C2CB005CDAE3 /* GIKCalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutAnnotation.h; sourceTree = "<group>"; };
+		F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutAnnotation.m; sourceTree = "<group>"; };
+		F862DE281309C489005CDAE3 /* GIKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutView.h; sourceTree = "<group>"; };
+		F862DE291309C489005CDAE3 /* GIKCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutView.m; sourceTree = "<group>"; };
+		F862DE981309DC61005CDAE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F862DEFF130AC465005CDAE3 /* GIKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotation.h; sourceTree = "<group>"; };
+		F862DF00130AC465005CDAE3 /* GIKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotation.m; sourceTree = "<group>"; };
+		F862DF07130AC6A3005CDAE3 /* GIKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKPinAnnotationView.h; sourceTree = "<group>"; };
+		F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKPinAnnotationView.m; sourceTree = "<group>"; };
+		F862DF4D130AE683005CDAE3 /* GIKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotationView.h; sourceTree = "<group>"; };
+		F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotationView.m; sourceTree = "<group>"; };
+		F862DF6C130AFB57005CDAE3 /* HotelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelDetailViewController.h; sourceTree = "<group>"; };
+		F862DF6D130AFB57005CDAE3 /* HotelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelDetailViewController.m; sourceTree = "<group>"; };
+		F8BEF0C0130D53FF000D5E50 /* GIKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKMapViewController.h; sourceTree = "<group>"; };
+		F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKMapViewController.m; sourceTree = "<group>"; };
+		F8BEF12C130D6AD3000D5E50 /* GIKMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GIKMapView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				F862DDB11309BB06005CDAE3 /* MapKit.framework in Frameworks */,
+				F862DDF01309BB7B005CDAE3 /* CoreLocation.framework in Frameworks */,
+				F862DE991309DC61005CDAE3 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F862DE1C1309BD45005CDAE3 /* GIK Map Classes */,
+				1D3623240D0F684500981E51 /* AnimatedCalloutAppDelegate.h */,
+				1D3623250D0F684500981E51 /* AnimatedCalloutAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* MapViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* MapViewController.m */,
+				F822C577130A342A000F0385 /* HotelAnnotation.h */,
+				F822C578130A342A000F0385 /* HotelAnnotation.m */,
+				F822C57E130A3476000F0385 /* Hotel.h */,
+				F822C57F130A3476000F0385 /* Hotel.m */,
+				F862DF6C130AFB57005CDAE3 /* HotelDetailViewController.h */,
+				F862DF6D130AFB57005CDAE3 /* HotelDetailViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* AnimatedCallout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* AnimatedCallout_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F822C649130B3575000F0385 /* NIBs */,
+				F822C632130B356E000F0385 /* Images */,
+				8D1107310486CEB800E47090 /* AnimatedCallout-Info.plist */,
+				F822C56F130A2AF3000F0385 /* Hotels.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F862DDB01309BB06005CDAE3 /* MapKit.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				F862DDEF1309BB7B005CDAE3 /* CoreLocation.framework */,
+				F862DE981309DC61005CDAE3 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F822C632130B356E000F0385 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F8320A7C130B79A400CB5810 /* CalloutTableBackground.png */,
+				F8320A28130B3F8B00CB5810 /* Button_DisclosureAccessory.png */,
+				F822C633130B356E000F0385 /* CalloutPopoverBottomLeft.png */,
+				F822C634130B356E000F0385 /* CalloutPopoverBottomMiddle.png */,
+				F822C635130B356E000F0385 /* CalloutPopoverBottomRight.png */,
+				F822C636130B356E000F0385 /* CalloutPopoverDownArrows.png */,
+				F822C637130B356E000F0385 /* CalloutPopoverLeftArrows.png */,
+				F822C638130B356E000F0385 /* CalloutPopoverMiddleLeft.png */,
+				F822C639130B356E000F0385 /* CalloutPopoverMiddleMiddle.png */,
+				F822C63A130B356E000F0385 /* CalloutPopoverMiddleRight.png */,
+				F822C63B130B356E000F0385 /* CalloutPopoverTopLeft.png */,
+				F822C63C130B356E000F0385 /* CalloutPopoverTopMiddle.png */,
+				F822C63D130B356E000F0385 /* CalloutPopoverTopRight.png */,
+			);
+			name = Images;
+			path = Resources/Images;
+			sourceTree = "<group>";
+		};
+		F822C649130B3575000F0385 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				F822C64F130B366F000F0385 /* HotelDetailTableView.xib */,
+				F8BEF12C130D6AD3000D5E50 /* GIKMapView.xib */,
+				F822C64A130B3575000F0385 /* AnimatedCalloutViewController.xib */,
+				F822C64B130B3575000F0385 /* MainWindow.xib */,
+			);
+			name = NIBs;
+			path = Resources/NIBs;
+			sourceTree = "<group>";
+		};
+		F862DE1C1309BD45005CDAE3 /* GIK Map Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F862DE231309C2CB005CDAE3 /* GIKCalloutAnnotation.h */,
+				F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */,
+				F862DE281309C489005CDAE3 /* GIKCalloutView.h */,
+				F862DE291309C489005CDAE3 /* GIKCalloutView.m */,
+				F822C523130A1004000F0385 /* GIKCalloutContentView.h */,
+				F822C524130A1004000F0385 /* GIKCalloutContentView.m */,
+				F862DEFF130AC465005CDAE3 /* GIKAnnotation.h */,
+				F862DF00130AC465005CDAE3 /* GIKAnnotation.m */,
+				F862DF07130AC6A3005CDAE3 /* GIKPinAnnotationView.h */,
+				F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */,
+				F862DF4D130AE683005CDAE3 /* GIKAnnotationView.h */,
+				F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */,
+				F8BEF0C0130D53FF000D5E50 /* GIKMapViewController.h */,
+				F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */,
+			);
+			name = "GIK Map Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* AnimatedCallout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "AnimatedCallout" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimatedCallout;
+			productName = AnimatedCallout;
+			productReference = 1D6058910D05DD3D006BFB54 /* AnimatedCallout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AnimatedCallout" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* AnimatedCallout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F822C570130A2AF3000F0385 /* Hotels.plist in Resources */,
+				F822C63E130B356E000F0385 /* CalloutPopoverBottomLeft.png in Resources */,
+				F822C63F130B356E000F0385 /* CalloutPopoverBottomMiddle.png in Resources */,
+				F822C640130B356E000F0385 /* CalloutPopoverBottomRight.png in Resources */,
+				F822C641130B356E000F0385 /* CalloutPopoverDownArrows.png in Resources */,
+				F822C642130B356E000F0385 /* CalloutPopoverLeftArrows.png in Resources */,
+				F822C643130B356E000F0385 /* CalloutPopoverMiddleLeft.png in Resources */,
+				F822C644130B356E000F0385 /* CalloutPopoverMiddleMiddle.png in Resources */,
+				F822C645130B356E000F0385 /* CalloutPopoverMiddleRight.png in Resources */,
+				F822C646130B356E000F0385 /* CalloutPopoverTopLeft.png in Resources */,
+				F822C647130B356E000F0385 /* CalloutPopoverTopMiddle.png in Resources */,
+				F822C648130B356E000F0385 /* CalloutPopoverTopRight.png in Resources */,
+				F822C64C130B3575000F0385 /* AnimatedCalloutViewController.xib in Resources */,
+				F822C64D130B3575000F0385 /* MainWindow.xib in Resources */,
+				F822C650130B366F000F0385 /* HotelDetailTableView.xib in Resources */,
+				F8320A29130B3F8B00CB5810 /* Button_DisclosureAccessory.png in Resources */,
+				F8320A7D130B79A400CB5810 /* CalloutTableBackground.png in Resources */,
+				F8BEF12D130D6AD3000D5E50 /* GIKMapView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AnimatedCalloutAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */,
+				F862DE251309C2CB005CDAE3 /* GIKCalloutAnnotation.m in Sources */,
+				F862DE2A1309C489005CDAE3 /* GIKCalloutView.m in Sources */,
+				F822C525130A1004000F0385 /* GIKCalloutContentView.m in Sources */,
+				F822C579130A342A000F0385 /* HotelAnnotation.m in Sources */,
+				F822C580130A3476000F0385 /* Hotel.m in Sources */,
+				F862DF01130AC465005CDAE3 /* GIKAnnotation.m in Sources */,
+				F862DF09130AC6A3005CDAE3 /* GIKPinAnnotationView.m in Sources */,
+				F862DF4F130AE683005CDAE3 /* GIKAnnotationView.m in Sources */,
+				F862DF6E130AFB57005CDAE3 /* HotelDetailViewController.m in Sources */,
+				F8BEF0C2130D53FF000D5E50 /* GIKMapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AnimatedCallout_Prefix.pch;
+				INFOPLIST_FILE = "AnimatedCallout-Info.plist";
+				PRODUCT_NAME = AnimatedCallout;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AnimatedCallout_Prefix.pch;
+				INFOPLIST_FILE = "AnimatedCallout-Info.plist";
+				PRODUCT_NAME = AnimatedCallout;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "AnimatedCallout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "AnimatedCallout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

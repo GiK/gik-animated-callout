@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Parc 55 Wyndham</string>
+		<key>street</key>
+		<string>55 Cyril Magnin Street</string>
+		<key>city</key>
+		<string>San Francisco</string>
+		<key>state</key>
+		<string>CA</string>
+		<key>zip</key>
+		<string>94102</string>
+		<key>url</key>
+		<string>http://www.parc55hotel.com</string>
+		<key>phone</key>
+		<string>(415) 392-8000</string>
+		<key>latitude</key>
+		<real>37.784721</real>
+		<key>longitude</key>
+		<real>-122.408697</real>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hotel Palomar</string>
+		<key>street</key>
+		<string>12 4th Street</string>
+		<key>city</key>
+		<string>San Francisco</string>
+		<key>state</key>
+		<string>CA</string>
+		<key>zip</key>
+		<string>94103</string>
+		<key>phone</key>
+		<string>(415) 348-1111</string>
+		<key>url</key>
+		<string>http://www.hotelpalomar-sf.com</string>
+		<key>latitude</key>
+		<real>37.785376</real>
+		<key>longitude</key>
+		<real>-122.405607</real>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mariott Marquis</string>
+		<key>street</key>
+		<string>55 Fourth Street</string>
+		<key>city</key>
+		<string>San Francisco</string>
+		<key>state</key>
+		<string>CA</string>
+		<key>zip</key>
+		<string>94103</string>
+		<key>phone</key>
+		<string>(415) 896-1600</string>
+		<key>url</key>
+		<string>http://www.marriott.com</string>
+		<key>latitude</key>
+		<real>37.78509</real>
+		<key>longitude</key>
+		<real>-122.404751</real>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Villa Florence</string>
+		<key>street</key>
+		<string>225 Powell Street</string>
+		<key>city</key>
+		<string>San Francisco</string>
+		<key>state</key>
+		<string>CA</string>
+		<key>zip</key>
+		<string>94102</string>
+		<key>phone</key>
+		<string>(415) 397-7700</string>
+		<key>url</key>
+		<string>http://www.villaflorence.com</string>
+		<key>latitude</key>
+		<real>37.786553</real>
+		<key>longitude</key>
+		<real>-122.4083</real>
+	</dict>
+</array>
+</plist>
