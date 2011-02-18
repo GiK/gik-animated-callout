@@ -7,6 +7,8 @@
 //
 
 //  Subclass of MKAnnotationView which holds our custom view.
+//  Inspired by the work of James Rantanen and his custom map annotations:
+//  http://blog.asolutions.com/2010/09/building-custom-map-annotation-callouts-part-1/
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>

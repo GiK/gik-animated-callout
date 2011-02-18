@@ -6,7 +6,7 @@
 //  Copyright 2011 GeeksInKilts. All rights reserved.
 //
 
-//  Custom MKAnnotation object which is used to anchor the custom annotation view (GIKCalloutView) at the same coordinate as a selected pin.
+//  MKAnnotation object which is used to anchor the custom annotation view (GIKCalloutView) at the same coordinate as a selected pin.
 
 #import <MapKit/MapKit.h>
 

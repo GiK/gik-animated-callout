@@ -13,7 +13,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* MapViewController.m */; };
-		F822C525130A1004000F0385 /* GIKCalloutContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C524130A1004000F0385 /* GIKCalloutContentView.m */; };
 		F822C570130A2AF3000F0385 /* Hotels.plist in Resources */ = {isa = PBXBuildFile; fileRef = F822C56F130A2AF3000F0385 /* Hotels.plist */; };
 		F822C579130A342A000F0385 /* HotelAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C578130A342A000F0385 /* HotelAnnotation.m */; };
 		F822C580130A3476000F0385 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = F822C57F130A3476000F0385 /* Hotel.m */; };
@@ -35,15 +34,17 @@
 		F8320A7D130B79A400CB5810 /* CalloutTableBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F8320A7C130B79A400CB5810 /* CalloutTableBackground.png */; };
 		F862DDB11309BB06005CDAE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DDB01309BB06005CDAE3 /* MapKit.framework */; };
 		F862DDF01309BB7B005CDAE3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DDEF1309BB7B005CDAE3 /* CoreLocation.framework */; };
-		F862DE251309C2CB005CDAE3 /* GIKCalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */; };
-		F862DE2A1309C489005CDAE3 /* GIKCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DE291309C489005CDAE3 /* GIKCalloutView.m */; };
 		F862DE991309DC61005CDAE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862DE981309DC61005CDAE3 /* QuartzCore.framework */; };
-		F862DF01130AC465005CDAE3 /* GIKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF00130AC465005CDAE3 /* GIKAnnotation.m */; };
-		F862DF09130AC6A3005CDAE3 /* GIKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */; };
-		F862DF4F130AE683005CDAE3 /* GIKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */; };
 		F862DF6E130AFB57005CDAE3 /* HotelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F862DF6D130AFB57005CDAE3 /* HotelDetailViewController.m */; };
-		F8BEF0C2130D53FF000D5E50 /* GIKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */; };
 		F8BEF12D130D6AD3000D5E50 /* GIKMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8BEF12C130D6AD3000D5E50 /* GIKMapView.xib */; };
+		F8E52766130EB5BC002BC098 /* GIKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E52759130EB5BC002BC098 /* GIKAnnotation.m */; };
+		F8E52767130EB5BC002BC098 /* GIKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E5275B130EB5BC002BC098 /* GIKAnnotationView.m */; };
+		F8E52768130EB5BC002BC098 /* GIKCalloutAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E5275D130EB5BC002BC098 /* GIKCalloutAnnotation.m */; };
+		F8E52769130EB5BC002BC098 /* GIKCalloutContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E5275F130EB5BC002BC098 /* GIKCalloutContentView.m */; };
+		F8E5276A130EB5BC002BC098 /* GIKCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E52761130EB5BC002BC098 /* GIKCalloutView.m */; };
+		F8E5276B130EB5BC002BC098 /* GIKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E52763130EB5BC002BC098 /* GIKMapViewController.m */; };
+		F8E5276C130EB5BC002BC098 /* GIKPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E52765130EB5BC002BC098 /* GIKPinAnnotationView.m */; };
+		F8E5278B130F1273002BC098 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F8E5278A130F1273002BC098 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +59,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AnimatedCallout_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedCallout_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AnimatedCallout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnimatedCallout-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		F822C523130A1004000F0385 /* GIKCalloutContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutContentView.h; sourceTree = "<group>"; };
-		F822C524130A1004000F0385 /* GIKCalloutContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutContentView.m; sourceTree = "<group>"; };
 		F822C56F130A2AF3000F0385 /* Hotels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Hotels.plist; sourceTree = "<group>"; };
 		F822C577130A342A000F0385 /* HotelAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelAnnotation.h; sourceTree = "<group>"; };
 		F822C578130A342A000F0385 /* HotelAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelAnnotation.m; sourceTree = "<group>"; };
@@ -83,22 +82,26 @@
 		F8320A7C130B79A400CB5810 /* CalloutTableBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalloutTableBackground.png; sourceTree = "<group>"; };
 		F862DDB01309BB06005CDAE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F862DDEF1309BB7B005CDAE3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F862DE231309C2CB005CDAE3 /* GIKCalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutAnnotation.h; sourceTree = "<group>"; };
-		F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutAnnotation.m; sourceTree = "<group>"; };
-		F862DE281309C489005CDAE3 /* GIKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutView.h; sourceTree = "<group>"; };
-		F862DE291309C489005CDAE3 /* GIKCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutView.m; sourceTree = "<group>"; };
 		F862DE981309DC61005CDAE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F862DEFF130AC465005CDAE3 /* GIKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotation.h; sourceTree = "<group>"; };
-		F862DF00130AC465005CDAE3 /* GIKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotation.m; sourceTree = "<group>"; };
-		F862DF07130AC6A3005CDAE3 /* GIKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKPinAnnotationView.h; sourceTree = "<group>"; };
-		F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKPinAnnotationView.m; sourceTree = "<group>"; };
-		F862DF4D130AE683005CDAE3 /* GIKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotationView.h; sourceTree = "<group>"; };
-		F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotationView.m; sourceTree = "<group>"; };
 		F862DF6C130AFB57005CDAE3 /* HotelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelDetailViewController.h; sourceTree = "<group>"; };
 		F862DF6D130AFB57005CDAE3 /* HotelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelDetailViewController.m; sourceTree = "<group>"; };
-		F8BEF0C0130D53FF000D5E50 /* GIKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKMapViewController.h; sourceTree = "<group>"; };
-		F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKMapViewController.m; sourceTree = "<group>"; };
 		F8BEF12C130D6AD3000D5E50 /* GIKMapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GIKMapView.xib; sourceTree = "<group>"; };
+		F8E52758130EB5BC002BC098 /* GIKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotation.h; sourceTree = "<group>"; };
+		F8E52759130EB5BC002BC098 /* GIKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotation.m; sourceTree = "<group>"; };
+		F8E5275A130EB5BC002BC098 /* GIKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKAnnotationView.h; sourceTree = "<group>"; };
+		F8E5275B130EB5BC002BC098 /* GIKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKAnnotationView.m; sourceTree = "<group>"; };
+		F8E5275C130EB5BC002BC098 /* GIKCalloutAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutAnnotation.h; sourceTree = "<group>"; };
+		F8E5275D130EB5BC002BC098 /* GIKCalloutAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutAnnotation.m; sourceTree = "<group>"; };
+		F8E5275E130EB5BC002BC098 /* GIKCalloutContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutContentView.h; sourceTree = "<group>"; };
+		F8E5275F130EB5BC002BC098 /* GIKCalloutContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutContentView.m; sourceTree = "<group>"; };
+		F8E52760130EB5BC002BC098 /* GIKCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKCalloutView.h; sourceTree = "<group>"; };
+		F8E52761130EB5BC002BC098 /* GIKCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKCalloutView.m; sourceTree = "<group>"; };
+		F8E52762130EB5BC002BC098 /* GIKMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKMapViewController.h; sourceTree = "<group>"; };
+		F8E52763130EB5BC002BC098 /* GIKMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKMapViewController.m; sourceTree = "<group>"; };
+		F8E52764130EB5BC002BC098 /* GIKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKPinAnnotationView.h; sourceTree = "<group>"; };
+		F8E52765130EB5BC002BC098 /* GIKPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKPinAnnotationView.m; sourceTree = "<group>"; };
+		F8E5277B130EB7B4002BC098 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; wrapsLines = 1; };
+		F8E5278A130F1273002BC098 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +124,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F862DE1C1309BD45005CDAE3 /* GIK Map Classes */,
+				F8E52757130EB5BC002BC098 /* GIK */,
 				1D3623240D0F684500981E51 /* AnimatedCalloutAppDelegate.h */,
 				1D3623250D0F684500981E51 /* AnimatedCalloutAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* MapViewController.h */,
@@ -152,6 +155,8 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				F8E5277B130EB7B4002BC098 /* README.markdown */,
+				F8E5278A130F1273002BC098 /* LICENSE */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -222,25 +227,25 @@
 			path = Resources/NIBs;
 			sourceTree = "<group>";
 		};
-		F862DE1C1309BD45005CDAE3 /* GIK Map Classes */ = {
+		F8E52757130EB5BC002BC098 /* GIK */ = {
 			isa = PBXGroup;
 			children = (
-				F862DE231309C2CB005CDAE3 /* GIKCalloutAnnotation.h */,
-				F862DE241309C2CB005CDAE3 /* GIKCalloutAnnotation.m */,
-				F862DE281309C489005CDAE3 /* GIKCalloutView.h */,
-				F862DE291309C489005CDAE3 /* GIKCalloutView.m */,
-				F822C523130A1004000F0385 /* GIKCalloutContentView.h */,
-				F822C524130A1004000F0385 /* GIKCalloutContentView.m */,
-				F862DEFF130AC465005CDAE3 /* GIKAnnotation.h */,
-				F862DF00130AC465005CDAE3 /* GIKAnnotation.m */,
-				F862DF07130AC6A3005CDAE3 /* GIKPinAnnotationView.h */,
-				F862DF08130AC6A3005CDAE3 /* GIKPinAnnotationView.m */,
-				F862DF4D130AE683005CDAE3 /* GIKAnnotationView.h */,
-				F862DF4E130AE683005CDAE3 /* GIKAnnotationView.m */,
-				F8BEF0C0130D53FF000D5E50 /* GIKMapViewController.h */,
-				F8BEF0C1130D53FF000D5E50 /* GIKMapViewController.m */,
+				F8E52758130EB5BC002BC098 /* GIKAnnotation.h */,
+				F8E52759130EB5BC002BC098 /* GIKAnnotation.m */,
+				F8E5275A130EB5BC002BC098 /* GIKAnnotationView.h */,
+				F8E5275B130EB5BC002BC098 /* GIKAnnotationView.m */,
+				F8E5275C130EB5BC002BC098 /* GIKCalloutAnnotation.h */,
+				F8E5275D130EB5BC002BC098 /* GIKCalloutAnnotation.m */,
+				F8E5275E130EB5BC002BC098 /* GIKCalloutContentView.h */,
+				F8E5275F130EB5BC002BC098 /* GIKCalloutContentView.m */,
+				F8E52760130EB5BC002BC098 /* GIKCalloutView.h */,
+				F8E52761130EB5BC002BC098 /* GIKCalloutView.m */,
+				F8E52762130EB5BC002BC098 /* GIKMapViewController.h */,
+				F8E52763130EB5BC002BC098 /* GIKMapViewController.m */,
+				F8E52764130EB5BC002BC098 /* GIKPinAnnotationView.h */,
+				F8E52765130EB5BC002BC098 /* GIKPinAnnotationView.m */,
 			);
-			name = "GIK Map Classes";
+			path = GIK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +315,7 @@
 				F8320A29130B3F8B00CB5810 /* Button_DisclosureAccessory.png in Resources */,
 				F8320A7D130B79A400CB5810 /* CalloutTableBackground.png in Resources */,
 				F8BEF12D130D6AD3000D5E50 /* GIKMapView.xib in Resources */,
+				F8E5278B130F1273002BC098 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,16 +329,16 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AnimatedCalloutAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* MapViewController.m in Sources */,
-				F862DE251309C2CB005CDAE3 /* GIKCalloutAnnotation.m in Sources */,
-				F862DE2A1309C489005CDAE3 /* GIKCalloutView.m in Sources */,
-				F822C525130A1004000F0385 /* GIKCalloutContentView.m in Sources */,
 				F822C579130A342A000F0385 /* HotelAnnotation.m in Sources */,
 				F822C580130A3476000F0385 /* Hotel.m in Sources */,
-				F862DF01130AC465005CDAE3 /* GIKAnnotation.m in Sources */,
-				F862DF09130AC6A3005CDAE3 /* GIKPinAnnotationView.m in Sources */,
-				F862DF4F130AE683005CDAE3 /* GIKAnnotationView.m in Sources */,
 				F862DF6E130AFB57005CDAE3 /* HotelDetailViewController.m in Sources */,
-				F8BEF0C2130D53FF000D5E50 /* GIKMapViewController.m in Sources */,
+				F8E52766130EB5BC002BC098 /* GIKAnnotation.m in Sources */,
+				F8E52767130EB5BC002BC098 /* GIKAnnotationView.m in Sources */,
+				F8E52768130EB5BC002BC098 /* GIKCalloutAnnotation.m in Sources */,
+				F8E52769130EB5BC002BC098 /* GIKCalloutContentView.m in Sources */,
+				F8E5276A130EB5BC002BC098 /* GIKCalloutView.m in Sources */,
+				F8E5276B130EB5BC002BC098 /* GIKMapViewController.m in Sources */,
+				F8E5276C130EB5BC002BC098 /* GIKPinAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

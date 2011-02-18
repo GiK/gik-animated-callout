@@ -140,17 +140,22 @@
 	
 	self.sideArrowVerticalOffset = [self convertPoint:self.parentAnnotationView.frame.origin fromView:self.parentAnnotationView.superview].y;
 	
+	
 	if (fabs(distanceFromCenter) < (roundf(frameWidth/2) - arrowOffset)) {
-		// Keep callout centered on map, but adjust the bottom arrow's origin.
+		// The parent pin is close to the center, the callout bubble will be drawn centered on the map.
+		// The down-arrow will be offset to the left or right of center, depending on the location of the pin.
 		horizontalOffset = distanceFromCenter;
 		self.bottomArrowHorizontalOffset = roundf(frameWidth/2) - distanceFromCenter - BOTTOM_ARROW_CENTER;
 	}
 	else {
+		// The parent pin far enough to the left or right of center that the callout bubble can't be drawn in the center of the map.
 		if (distanceFromCenter > 0) {
+			// The down-arrow will be offset to the left of the bubble.
 			horizontalOffset = roundf(frameWidth/2) - arrowOffset;
 			self.bottomArrowHorizontalOffset = SIDE_WIDTH + SIDE_INSET;
 		}
 		else {
+			// The down-arrow will be offset to the right of the bubble.
 			horizontalOffset = - (roundf(frameWidth/2) - arrowOffset);
 			self.bottomArrowHorizontalOffset = frameWidth - SIDE_WIDTH - SIDE_INSET - BOTTOM_ARROW_WIDTH;
 		}
@@ -166,6 +171,8 @@
 	if (annotation != nil && self.parentAnnotationView != nil) {
 		self.parentOrigin = [self.mapView convertPoint:self.parentAnnotationView.frame.origin fromView:self.parentAnnotationView.superview];
 		self.calloutMode = CalloutModeDefault;
+		
+		// Forces the arrow to be reset if it was cached.
 		self.bottomArrow.image = [self arrowForFrame:0 orientation:ArrowDown];
 		[self calculateOffsets];
 	}
@@ -175,6 +182,7 @@
 #pragma mark -
 #pragma mark Callout layout & animation
 
+// Grab an arrow subimage from the respective image atlases. 
 - (UIImage *)arrowForFrame:(NSUInteger)frameNumber orientation:(ArrowOrientation)orientation {
 	UIImage *arrowSourceImage = nil;
 	CGSize subimageSize = CGSizeZero;
@@ -199,6 +207,7 @@
 	CFRelease(cgArrow);
 	
 	if (orientation == ArrowRight) {
+		// Use UIImage scale property to flip the image horizontally.
 		return [UIImage imageWithCGImage:theArrow.CGImage scale:theArrow.scale orientation:UIImageOrientationUpMirrored];
 	}
 	
@@ -289,6 +298,9 @@
 	}
 	
 	CGRect newFrame = CGRectMake(newCalloutOrigin.x, newCalloutOrigin.y, newFrameSize.width, self.bounds.size.height);
+	
+	// When the CADisplayLink is added to the animation's run loop, it will draw a new image for the bottom arrow.
+	// The default frame rate matches the device's refresh rate.
 	self.animationDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateBottomArrowImage)];
 	
 	self.horizontalAnimationTick = 0;
@@ -298,18 +310,24 @@
 						  delay:0.0
 						options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionLayoutSubviews
 					 animations:^{
+						 //
 						 // First, animate the width of the callout to match the detail view's width.
+						 //
 						 [self.animationDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 						 [self setFrame:newFrame];
 					 }
 					 completion:^ (BOOL finished) {
 						 self.calloutMode = CalloutModeDetail;
 						 [self.animationDisplayLink invalidate];
+						 
+						 // Draw a new image for the side arrow with every tick of the refresh rate.
 						 self.animationDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateSideArrowImage)];
 						 CGRect expandedFrame = self.frame;
 						 expandedFrame.size.height = self.bounds.size.height + newFrameSize.height + BOTTOM_INSET;
 						 expandedFrame.origin.y = self.parentAnnotationView.frame.origin.y - roundf(expandedFrame.size.height/2) + SIDE_ARROW_CENTER;
 
+						 // Re-set the centerOffset to the left or right side of the annotation pin.
+						 // This ensures that the expanded callout will stay in position if the map's region property changes.
 						 if (self.calloutBias == LeftBias) {
 							 self.centerOffset = CGPointMake(-(roundf(expandedFrame.size.width/2)) - 16.0f, -16.0f);
 						 }
@@ -321,9 +339,11 @@
 						 
 						 [UIView animateWithDuration:0.3
 											   delay:0.0 
-											 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionLayoutSubviews
+											 options:UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionLayoutSubviews
 										  animations:^{
+											  //
 											  // Second, animate the height of the callout to match the detail view's height.
+											  //
 											  [self.animationDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 											  [self setFrame:expandedFrame];
 										  } 
