@@ -39,6 +39,7 @@
 
 #define ARROW_ANIMATION_FRAMES			15
 
+
 @interface GIKCalloutView ()
 
 @property (nonatomic, readonly) UIImageView *topLeft, *topMiddle, *middleMiddle, *topRight;
@@ -60,9 +61,10 @@
 
 - (UIImage *)arrowForFrame:(NSUInteger)frameNumber orientation:(ArrowOrientation)orientation;
 - (void)displayDefaultCallout;
+- (void)disableSiblingAnnotations;
+- (void)disableMapSelections;
 
 @end
-
 
 
 @implementation GIKCalloutView
@@ -78,6 +80,7 @@
 @synthesize calloutMode;
 @synthesize horizontalAnimationTick, verticalAnimationTick;
 @synthesize animationDisplayLink;
+
 
 - (void)dealloc {
 	[animationDisplayLink invalidate];
@@ -111,6 +114,27 @@
 	
 	self.enabled = NO;
 	self.backgroundColor = [UIColor clearColor];
+	
+	UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
+	panGestureRecognizer.cancelsTouchesInView = NO;
+	panGestureRecognizer.delegate = self;
+	[self addGestureRecognizer:panGestureRecognizer];
+	[panGestureRecognizer release];
+	
+	UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+	tapGestureRecognizer.cancelsTouchesInView = NO;
+	tapGestureRecognizer.delaysTouchesEnded = YES;
+	tapGestureRecognizer.delegate = self;
+	[self addGestureRecognizer:tapGestureRecognizer];
+	[tapGestureRecognizer release];
+	
+	UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
+	longPressGestureRecognizer.cancelsTouchesInView = NO;
+	longPressGestureRecognizer.delegate = self;
+	[self addGestureRecognizer:longPressGestureRecognizer];
+	[longPressGestureRecognizer release];
+	
+	
 	return self;
 }
 
@@ -119,13 +143,12 @@
 	[self displayDefaultCallout];
 }
 
+
 #pragma mark -
 #pragma mark Annotation setup
 
 - (void)calculateOffsets {
-	
 	CGPoint mapCenter = [self.mapView convertPoint:CGPointMake(roundf(self.mapView.frame.size.width/2), roundf(self.mapView.frame.size.height/2)) toView:self.mapView.superview];
-	
 	int distanceFromCenter = mapCenter.x - self.parentOrigin.x;
 	if (distanceFromCenter >= 0) {
 		self.calloutBias = RightBias;
@@ -494,19 +517,46 @@
 	[self disableSiblingAnnotations];
 }
 
+
+#pragma mark -
+#pragma mark UIGestureRecognizerDelegate methods
+
+
+- (void)handleTapFrom:(UIGestureRecognizer *)gestureRecognizer {
+	if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+		// The calloutView may overlap other annotations - disable them temporarily so they can't be selected with the touch.
+		[self disableMapSelections];
+	}
+}
+
+- (void)handleLongPressFrom:(UIGestureRecognizer *)gestureRecognizer {
+	if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+		// The calloutView may overlap other annotations - disable them temporarily so they can't be selected with the touch.
+		[self disableMapSelections];
+	}	
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+	if (![[otherGestureRecognizer view] isDescendantOfView:self]) {
+		
+		// Setting the enabled property to NO while a gesture recognizer is currently
+		// recognizing a gesture will cause it to transition to a cancelled state.
+		otherGestureRecognizer.enabled = NO;
+		
+		// ... then re-enable so it can start receiving touches again. 
+		// However, it'll ignore long gestures (pans, long presses, swipes) which are already in progress.
+		otherGestureRecognizer.enabled = YES;
+	}
+	return YES;
+}
+
+
 #pragma mark -
 #pragma mark GIKCalloutContentViewDelegate methods
 	 
-- (void)accessoryButtonTapped {
-//	if ([self.mapView.delegate respondsToSelector:@selector(mapView:annotationView:calloutAccessoryControlTapped:)]) {
-//		[self.mapView.delegate mapView:self.mapView annotationView:self calloutAccessoryControlTapped:nil];
-//	}
-	
-	((GIKAnnotationView *)self.parentAnnotationView).selectionEnabled = NO;
-	[self disableSiblingAnnotations];
+- (void)accessoryButtonTapped {	
 	[self displayDetailCallout];
 }
-
 
 
 #pragma mark -

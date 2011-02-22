@@ -33,7 +33,6 @@
 	return self;
 }
 
-
 #pragma mark -
 #pragma mark View management
 

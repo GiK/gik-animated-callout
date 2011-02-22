@@ -37,9 +37,9 @@ typedef enum {
 	if (!(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		return nil;
 	}
+	
 	return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,15 +50,6 @@ typedef enum {
 	backgroundImageView.frame = self.view.bounds;
 	self.table.backgroundView = backgroundImageView;
 	[backgroundImageView release];
-	
-	UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
-	[self.table addGestureRecognizer:panGestureRecognizer];
-	[panGestureRecognizer release];
-	
-//	UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-//	[tapGestureRecognizer setDelaysTouchesEnded:NO];
-//	[self.table addGestureRecognizer:tapGestureRecognizer];
-//	[tapGestureRecognizer release];
 }
 
 
@@ -169,33 +160,6 @@ typedef enum {
 	}
 }
 
-#pragma mark -
-#pragma mark UIGestureRecognizer
-
-- (void)handlePanFrom:(UIPanGestureRecognizer *)recognizer {	
-	if (recognizer.state == UIGestureRecognizerStateBegan || UIGestureRecognizerStateChanged) {
-		CGPoint translation = [recognizer translationInView:recognizer.view];
-		
-		// We don't want horizontal movement, so set the x component to 0.
-		translation.x = 0.0f;
-		
-		// The translation occurs in the reverse direction of the drag - invert the translation to correct.
-		// To mimic the delayed dragging in a real scroll/tableView, make the amount we scroll a fraction of the actual translation.
-		translation.y = -(translation.y/2);
-		
-		// All UITableViews are a subclass of UIScrollView, and adopt the UIScrollViewDelegate protocol, so set the scroll position with contentOffset.
-		[(UIScrollView *)recognizer.view setContentOffset:translation animated:NO];
-	}
-	
-	if (recognizer.state == UIGestureRecognizerStateEnded) {
-		// Reset the table's position once the gesture's state is ended.
-		[(UIScrollView *)recognizer.view setContentOffset:CGPointZero animated:YES];
-	}
-}
-
-//- (void)handleTapFrom:(UITapGestureRecognizer *)recognizer {
-//
-//}
 
 #pragma mark -
 #pragma mark Accessors

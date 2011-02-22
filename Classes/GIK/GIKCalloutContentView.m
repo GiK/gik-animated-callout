@@ -68,7 +68,6 @@
 	
 	[self addSubview:self.textLabel];
 	[self addSubview:self.rightAccessoryView];
-	
 	return self;
 }
 
@@ -90,11 +89,7 @@
 		rightAccessoryView = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
 		rightAccessoryView.enabled = YES;
 		[rightAccessoryView setImage:[UIImage imageNamed:@"Button_DisclosureAccessory.png"] forState:UIControlStateNormal];
-		
-		UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-		[rightAccessoryView addGestureRecognizer:tapGestureRecognizer];
-		[tapGestureRecognizer release];
-		
+		[rightAccessoryView addTarget:self action:@selector(accessoryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];		
 	}
 	return rightAccessoryView;
 }
@@ -114,12 +109,11 @@
 	}
 }
 
-- (void)handleTapFrom:(UITapGestureRecognizer *)gestureRecognizer {
+- (IBAction)accessoryButtonTapped:(id)sender {
 	[self.delegate accessoryButtonTapped];
 }
 
 - (void)layoutSubviews {
-	
 	CGRect accessoryFrame = CGRectMake(self.bounds.size.width - RIGHT_ACCESSORY_SIZE, RIGHT_ACCESSORY_INSET_TOP, RIGHT_ACCESSORY_SIZE, RIGHT_ACCESSORY_SIZE);
 	
 	switch (mode) {

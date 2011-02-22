@@ -32,11 +32,11 @@ typedef enum {
 	RightBias
 } CalloutBias;
 
-@interface GIKCalloutView : MKAnnotationView <GIKCalloutContentViewDelegate> {	
+@interface GIKCalloutView : MKAnnotationView <GIKCalloutContentViewDelegate, UIGestureRecognizerDelegate> {	
 	MKAnnotationView *parentAnnotationView; // The subclass of GIKAnnotationView (or GIKPinAnnotationView) which was selected from the map.
 	MKMapView *mapView;
 	UIView *calloutContentView;				// Container view
-
+	
 @private
 	UIImageView *topLeft, *topMiddle, *middleMiddle, *topRight;
 	UIImageView *leftAboveArrow, *leftBelowArrow, *rightAboveArrow, *rightBelowArrow;
@@ -53,13 +53,11 @@ typedef enum {
 	CADisplayLink *animationDisplayLink;	// Added to the animation's runloop to control the animation of arrows as the callout expands.
 	
 	CalloutMode calloutMode;
-	CalloutBias calloutBias;	
+	CalloutBias calloutBias;
 }
 
 @property (nonatomic, retain) MKAnnotationView *parentAnnotationView;
 @property (nonatomic, retain) MKMapView *mapView;
 @property (nonatomic, retain) UIView *calloutContentView;
-
-- (void)disableMapSelections;
 
 @end

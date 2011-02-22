@@ -13,7 +13,6 @@
 #import "GIKAnnotation.h"
 #import "GIKPinAnnotationView.h"
 
-
 @implementation GIKMapViewController
 
 @synthesize mapView, selectedAnnotationView, calloutDetailController, detailDataSource;
@@ -30,9 +29,9 @@
 	if (!(self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		return nil;
 	}
+	
 	return self;
 }
-
 
 #pragma mark -
 #pragma mark View management
@@ -64,7 +63,6 @@
     [super viewDidUnload];
 	self.mapView = nil;
 }
-
 
 #pragma mark -
 #pragma mark MKMapViewDelegate methods
@@ -116,7 +114,7 @@
 		calloutView.mapView = self.mapView;
 		
 		GIKCalloutContentView *calloutContentView = [GIKCalloutContentView viewWithLabelText:[(GIKAnnotation *)self.selectedAnnotationView.annotation title]];
-		
+
 		calloutContentView.delegate = calloutView;
 		calloutContentView.detailView = self.calloutDetailController.view;
 		[calloutView setCalloutContentView:calloutContentView];
@@ -124,7 +122,5 @@
 	}
 	return nil;
 }
-		 
-
-
+	
 @end

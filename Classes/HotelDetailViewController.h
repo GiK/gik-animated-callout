@@ -10,7 +10,7 @@
 
 @class Hotel;
 
-@interface HotelDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface HotelDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate> {
 	UITableView *table;
 	Hotel *hotel;
 
