@@ -9,9 +9,10 @@
 #import "GIKCalloutContentView.h"
 
 #define INSET_TOP					4.0f
+#define INSET_LEFT                  4.0f
 
 #define DEFAULT_CONTENT_HEIGHT		35.0f
-#define ACCESSORY_BUFFER			20.0f
+#define ACCESSORY_BUFFER			4.0f
 
 #define RIGHT_ACCESSORY_SIZE		29.0f
 #define RIGHT_ACCESSORY_INSET_TOP	4.0f
@@ -44,7 +45,7 @@
 
 + (GIKCalloutContentView *)viewWithLabelText:(NSString *)text {
 	CGSize textSize = [text sizeWithFont:[UIFont boldSystemFontOfSize:17.0f]];
-	CGFloat contentWidth = textSize.width + ACCESSORY_BUFFER + RIGHT_ACCESSORY_SIZE;
+	CGFloat contentWidth = INSET_LEFT + textSize.width + ACCESSORY_BUFFER + RIGHT_ACCESSORY_SIZE;
 	
 	// If the width is an odd number, the view may not be drawn on pixel boundaries.
 	if (fmod(contentWidth, 2.0f) > 0) {
@@ -62,7 +63,7 @@
 
 	mode = GIKContentModeDefault;
 	textLabelText = [theText copy];
-	textLabelFrame = CGRectMake(0.0f, roundf(DEFAULT_CONTENT_HEIGHT/2 - theTextSize.height/2), theTextSize.width, theTextSize.height);
+	textLabelFrame = CGRectMake(INSET_LEFT, roundf(DEFAULT_CONTENT_HEIGHT/2 - theTextSize.height/2), theTextSize.width, theTextSize.height);
 	
 	[self setClipsToBounds:YES];
 	
